@@ -5,7 +5,7 @@ Cocok untuk pemula yang baru belajar Python.
 
 ---
 
-## 📌 Isi Program
+## Isi Program
 1. **Variabel & Tipe Data**  
    - `str`  → String (contoh: nama, alamat, tempat_lahir, tanggal_lahir)  
    - `int`  → Integer (contoh: umur)  
