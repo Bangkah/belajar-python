@@ -1,0 +1,36 @@
+{
+    // Ukuran font
+    "editor.fontSize": 16,
+    "editor.lineHeight": 24,
+    // Font family (pakai Fira Code biar ada ligature)
+    "editor.fontFamily": "Fira Code, Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    // Tema & tampilan
+    "workbench.colorTheme": "Default Dark+",
+    "editor.minimap.enabled": false,
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorStyle": "line",
+    "editor.cursorWidth": 2,
+    // Indentasi & tab
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    // Numbering & rulers (biar rapih)
+    "editor.lineNumbers": "on",
+    "editor.rulers": [
+        80,
+        120
+    ],
+    // Autosave & format
+    "files.autoSave": "onWindowChange",
+    "editor.formatOnSave": true,
+    // Python specific (kalau kamu sering ngoding Python)
+    "[python]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true
+    },
+    // Explorer & terminal
+    "explorer.compactFolders": false,
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.cursorStyle": "block"
+}
