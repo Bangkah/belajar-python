@@ -8,6 +8,8 @@
 # Iterasi 1:
 # x_0 = 1 \\
 
+#Turunan dari f(x) = cos(x) - x adalah f'(x) = -sin(x) - 1.
+
 
 # f(x_0) = \cos(1) - 1 \approx 0.5403 - 1 = -0.4597 \\
 
@@ -41,29 +43,34 @@
 # Setelah 3 iterasi, nilai sudah mendekati konvergen di sekitar 0.7391.
 
 import math
-
+#FUNGSI YANG MAU DICARI AKARNYA
 def f(x):
     return math.cos(x) - x
-
+#DEFINISI TURUNAN FUNGSI
 def f_prime(x):
     return -math.sin(x) - 1
-
+#Fungsi Newton-Raphson
 def newton_raphson(x0, tolerance=1e-4, max_iter=100):
-    xn = x0
+    #Iterasi metode Newton-Raphson
+    xn = x0 #NILAI SAAT INI
     for n in range(max_iter):
-        fxn = f(xn)
-        fpxn = f_prime(xn)
+        fxn = f(xn) #NILAI FUNGSI TITIK XN
+        fpxn = f_prime(xn) #NILAI TURUNAN FUNGSI TITIK XN
+        #Cek turunan nol
         if fpxn == 0:
             print("Turunan nol. Metode gagal.")
             return None
+        #Hitung perkiraan akar berikutnya
         xn_next = xn - fxn / fpxn
         print(f"Iterasi {n+1}: x = {xn_next:.6f}")
+        #Cek konvergensi
         if abs(xn_next - xn) < tolerance:
             print(f"Akar ditemukan: {xn_next:.6f}")
             return xn_next
+        #Update nilai untuk iterasi selanjutnya
         xn = xn_next
     print("Maksimum iterasi tercapai. Metode gagal.")
     return None
 
-# Eksekusi
+# Eksekusi FUNGSI
 newton_raphson(1)
